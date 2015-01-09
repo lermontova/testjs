@@ -1,0 +1,46 @@
+<html ng-app>
+<head>
+	<meta charset="windows-1251">
+	<link rel="stylesheet" href="css/normalize.css"/>
+	<link rel="stylesheet" href="css/app.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script> 
+	<script src="js/controllers/AppCtrl.js"></script>
+</head>
+<body ng-controller="AppCtrl">
+	<div class="breadcrumbs">
+	<div ng-click="App.Tab.settings = false; App.Tab.main = true;" class="active">Tasks</div>
+	<div ng-click="App.Tab.main = false; App.Tab.settings = true;">Settings</div>
+	</div>
+	<div class="main" ng-show="App.Tab.main">
+		<div class="enter">
+			<span class="task">{{ App.Task.text }}</span>
+			<br/>
+			<span>Enter your answer: </span>
+			<br/>
+			<span class="answer">
+				<input placeholder="enter the answer..."
+					ng-model="App.Task.userResponse"
+					ng-change="App.validation()"
+					type="text"/>
+			</span>
+			<button ng-disabled="!App.Task.userResponse" ng-click="App.testing()">send</button>
+		</div>
+	</div>
+	<div class="main" ng-show="App.Tab.settings">
+		<div class="enter">
+			Operations: <br/>
+			<span>Addition: <input type="checkbox" ng-model="App.Settings.add"/></span><br/>
+			<span>Subtraction: <input type="checkbox" ng-model="App.Settings.sub"/></span><br/>
+			<span>Multiplication: <input type="checkbox" ng-model="App.Settings.multiply"/></span> <br/>
+			<span>Division: <input type="checkbox" ng-model="App.Settings.divide"/></span><br/>			
+		</div>
+	</div>
+	<div class="right_section">
+		<div>Answer:</div>
+		<div>
+		<div class="left">{{ App.Result.success }}</div>
+		<div class="right">{{ App.Result.errors }}</div>
+		</div>
+	</div>
+</body>
+</html>

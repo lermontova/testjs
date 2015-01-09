@@ -1,0 +1,66 @@
+body {
+    height: 100%;
+}
+.breadcrumbs {
+    text-align: center;
+}
+.breadcrumbs div {
+	background:#CD3333;
+	font-family: 'Merriweather', serif;
+	width: 50%;
+	float: left;
+	font-size: 35px;
+	height: 50px;
+	border-bottom: solid 2px;
+	cursor: pointer;
+}
+.breadcrumbs .active {
+	font-family: 'Merriweather', serif;
+}
+.main {
+	padding-top: 20px;
+	background: #FF8C69;
+	width: 66%;
+	height: 100%;
+	float: left;
+}
+.right_section {
+	padding-top: 20px;
+	float: right;
+	width: 34%;
+	background: #FFA07A;
+	height: 100%;
+	font-size: 25px;
+	text-align: center;
+	font-family: 'Merriweather', serif;
+}
+.right_section .left {
+	font-size: 50px;
+	font-family: 'Merriweather', serif;
+	margin-left: 25%;
+	float: left;
+	color: green;
+}
+.right_section .right {
+	font-family: 'Merriweather', serif;
+	font-size: 50px;
+	margin-right: 25%;
+	float: right;
+	color: red;
+}
+.green {
+	background: green;
+}
+.red {
+	background: red;
+}
+.task {
+	text-align: center;
+}
+.enter {
+	padding-left: 50px;
+}
+.log {
+	margin-top: 50px;
+	padding-left: 50px;
+}
